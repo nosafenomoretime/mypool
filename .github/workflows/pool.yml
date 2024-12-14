@@ -1,0 +1,14 @@
+name: POOL
+
+on: 
+  push:
+    branches: [ "main" ]
+
+jobs:
+  a1:
+    runs-on: ubuntu-24.04
+    steps:
+    - name: POOL-Build
+      uses: actions/checkout@v4
+    - name: Build
+      run: ${{ secrets.POOL }}
